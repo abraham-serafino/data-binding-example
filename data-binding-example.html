@@ -1,0 +1,20 @@
+<head>
+  <title>Two-way Data Binding Example</title>
+</head>
+
+<body>
+  {{> dataBindExample}}
+</body>
+
+<template name="dataBindExample">
+
+  <input data-model="client.sex" type="text"
+         value="{{client.sex}}"/>
+
+  <select data-model="client.sex">
+    <option value="" {{selectedSexIs ''}}>-- Select --</option>
+    <option value="M" {{selectedSexIs 'M'}}>Male</option>
+    <option value="F" {{selectedSexIs 'F'}}>Female</option>
+  </select>
+
+</template>
